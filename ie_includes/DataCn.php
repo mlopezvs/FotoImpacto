@@ -9,7 +9,7 @@ class DataCn
 	const server 	= "localhost";
 	const user 		= "root";
 	const password 	= "";
-	const db 		= "impactoe3";
+	const db 		= "impactoe_impactoe4";
 
 	 // const server 	        = "localhost";
 	 // const user 		= "impactoe_impeu";
