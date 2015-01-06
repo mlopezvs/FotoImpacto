@@ -37,36 +37,39 @@ class FormularioRegistrarPublicacion extends Pagina
 	
 	function MostrarFormularioPublicacion($usuario)
 	{
-?>		
+?>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
+
+	$(document).on("ready", function(){
+		$("#rotacion").val(window.orientation);
+
+	});
+
+</script>
+
 <div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
 
 					<div class="alert alert-info">
-					<p class="lead">que bueno, publica tu foto...!!!</p>
-					<hr>
+						<p class="lead">que bueno, publica tu foto...!!!</p>
+						<hr>
 						<form class="form-horizontal" method="POST" name="formulario_publicacion" action="index.php" role="form" enctype="multipart/form-data" onsubmit='verificarimagen(); return false'>
 						  
-						  <input type="hidden" name="foto" value="1">
-						  <div class="input-group col-md-6 col-md-offset-3">
-							<span class="input-group-addon">
-								<span class="glyphicon glyphicon-camera"></span>
-							</span>
-							<input type="file" name="foto" accept="image/jpg, image/jpeg, image/gif,image/png" class="form-control btn btn-warning" onchange="this.form.submit()">
-						  </div>
-
-<!-- 						  <div class="form-group">
-						    <label class="col-sm-3 control-label">glyphicon glyphicon-camera</label>
-						    <div class="col-sm-8">
-						      <input type="file" name="foto" accept="image/jpg, image/jpeg, image/gif,image/png" class="form-control btn btn-warning">
-						    </div>
-						  </div> -->
-
+							<input type="hidden" name="foto" value="1">
+						  	<div class="input-group col-md-6 col-md-offset-3">
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-camera"></span>
+								</span>
+								<input type="file" name="foto" accept="image/jpg, image/jpeg, image/gif,image/png" class="form-control btn btn-warning" onchange="this.form.submit()">
+						  	</div>
+							
+							<input type="text" id="rotacion" name="rotacion" />
 
 						</form>
 					</div>
 
-				
 			</div>
 		</div>
 	</div>
