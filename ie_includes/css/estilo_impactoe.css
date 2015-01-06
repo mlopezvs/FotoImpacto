@@ -1,0 +1,75 @@
+.idn{
+list-style-position: inside;
+}
+
+.borde1{	
+  padding: 3px 3px; 
+  border: PowderBlue 3px solid; 
+  border-radius: 5px;
+  margin: -1px; 
+}
+/*
+@media only screen and (max-width:700px) {
+.contenedor_principal {
+
+}
+
+}
+
+@media only screen and (max-width:600px) {
+div#header {
+text-align: center;
+}}*/
+
+/*.contenedor1{
+  
+}*/
+ img.enviar-foto{
+ 	margin-top: 8px;
+ }
+.enviar-foto{
+font-family: "orange";
+font-size: 30px;
+color: black;
+}
+a.enviar-foto{
+	text-decoration: none;
+}
+
+@font-face{
+font-family: orange;
+src:url(../fonts/orange_juice_2.0.ttf);
+font-style: normal;
+font-weight: bold;
+}
+
+.zoom{
+		transition: 0.3s ease;
+ 		-moz-transition: 0.3s ease; /* Firefox */
+ 		-webkit-transition: 0.3s ease; /* Chrome - Safari */
+ 		-o-transition: 0.3s ease; /* Opera */
+	}
+
+	.zoom:hover{
+		transform : scale(1.2);
+		-moz-transform : scale(1.2); /* Firefox */
+		-webkit-transform : scale(1.2); /* Chrome - Safari */
+		-o-transform : scale(1.2); /* Opera */
+		-ms-transform : scale(1.2); /* IE9 */
+	}
+
+.zoom2{
+		transition: 0.3s ease;
+ 		-moz-transition: 0.3s ease; /* Firefox */
+ 		-webkit-transition: 0.3s ease; /* Chrome - Safari */
+ 		-o-transition: 0.3s ease; /* Opera */
+	}
+
+	.zoom2:hover{
+
+		transform : scale(1.2);
+		-moz-transform : scale(1.2); /* Firefox */
+		-webkit-transform : scale(1.2); /* Chrome - Safari */
+		-o-transform : scale(1.2); /* Opera */
+		-ms-transform : scale(1.2); /* IE9 */
+	}	

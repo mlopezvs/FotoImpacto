@@ -1,0 +1,23 @@
+		if ($ancho<$alto) {
+			echo "vertical";			
+			$grados = -90;
+			$rotar = imagerotate($original, $grados, 0);
+		}
+
+		else{
+			echo "horizontal";
+			$rotar = $original;
+		}
+
+		if ($ancho>736) {
+	
+			$escala = 300/$ancho;
+
+			$ancho_t = $ancho*$escala;
+			$alto_t  = $alto*$escala;
+		}
+		else{
+			echo "tamanio natural";
+			$ancho_t = $ancho;
+			$alto_t  = $alto;
+		}
