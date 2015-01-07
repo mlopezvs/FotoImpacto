@@ -41,7 +41,7 @@ class FormularioRegistrarPublicacion extends Pagina
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script>
 
-	$(document).on("ready", function(){
+	$(window).on("orientationchange", function(){
 		$("#rotacion").val(window.orientation);
 
 	});
