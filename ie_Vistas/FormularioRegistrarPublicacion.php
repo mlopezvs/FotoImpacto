@@ -65,7 +65,7 @@ class FormularioRegistrarPublicacion extends Pagina
 								<input type="file" name="foto" accept="image/jpg, image/jpeg, image/gif,image/png" class="form-control btn btn-warning" onchange="this.form.submit()">
 						  	</div>
 							
-							<input type="text" id="rotacion" name="rotacion" />
+							<input type="hidden" id="rotacion" name="rotacion" />
 
 						</form>
 					</div>
