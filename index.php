@@ -22,10 +22,11 @@ session_start();
 	if(isset($_SESSION['username']) && isset($_POST['foto'])){
 				
 		$error_foto = $_FILES['foto']['error'];
+		echo $_POST["rotacion"];
 
 		include_once('ie_Controles/ControlRegistrarPublicacion.php');
 		$ObjRegistro = new ControlRegistrarPublicacion;
-		$ObjRegistro -> RegistrarPublicacion($error_foto,$id_usuario,$usuario);
+		//$ObjRegistro -> RegistrarPublicacion($error_foto,$id_usuario,$usuario);
 	}
 
 	elseif(isset($_SESSION['username']) && isset($_POST['registrar_foto'])){
