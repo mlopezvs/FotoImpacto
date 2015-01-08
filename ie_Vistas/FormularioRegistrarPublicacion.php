@@ -48,6 +48,17 @@ class FormularioRegistrarPublicacion extends Pagina
 		$("#rotacion").val(window.orientation);
 	});
 
+	var test = window.matchMedia("(orientation: portrait)");
+	test.addListener(function(m) {
+	  if(m.matches) {
+	    // Changed to portrait
+	    $("#rotacion").val('portrait');
+	  }else {
+	    // Changed to landscape
+	    $("#rotacion").val('landscape');
+	  }
+	});	
+
 </script>
 
 <div class="container">
