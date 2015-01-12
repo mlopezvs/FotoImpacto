@@ -22,7 +22,8 @@ session_start();
 	if(isset($_SESSION['username']) && isset($_POST['foto'])){
 				
 		$error_foto = $_FILES['foto']['error'];
-		echo $_POST["rotacion"];
+		echo "Chrome: ".$_POST["orientacionChrome"]."<br>";
+		echo "Firefox: ".$_POST["orientacionFirefox"];
 
 		include_once('ie_Controles/ControlRegistrarPublicacion.php');
 		$ObjRegistro = new ControlRegistrarPublicacion;

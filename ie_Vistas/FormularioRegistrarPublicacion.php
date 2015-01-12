@@ -39,24 +39,13 @@ class FormularioRegistrarPublicacion extends Pagina
 	{
 ?>
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>	
 <script>
-	$(window).on("load", function(){
-		$("#rotacion").val(window.orientation);
-	});
+	var orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
 
-	$(window).on("orientationchange", function(){
-		$("#rotacion").val(window.orientation);
-	});
-
-	var test = window.matchMedia("(orientation: portrait)");
-	test.addListener(function(m) {
-	  if(m.matches) {
-	    // Changed to portrait
-	    $("#rotacion").val('portrait');
-	  }else {
-	    // Changed to landscape
-	    $("#rotacion").val('landscape');
-	  }
+	$(window).on("orientationchange", function() {
+		$("#orientacionChrome").val(orientation);
+		$("#orientacionFirefox").val(screen.mozOrientation);
 	});	
 
 </script>
@@ -78,7 +67,8 @@ class FormularioRegistrarPublicacion extends Pagina
 								<input type="file" name="foto" accept="image/jpg, image/jpeg, image/gif,image/png" class="form-control btn btn-warning" onchange="this.form.submit()">
 						  	</div>
 							
-							<input type="hidden" id="rotacion" name="rotacion" />
+							<input type="hidden" id="orientacionChrome" name="orientacionChrome" />
+							<input type="hidden" id="orientacionFirefox" name="orientacionFirefox" />
 
 						</form>
 					</div>
